@@ -1,0 +1,20 @@
+<h1>{{ exibirSugestao ? 'Sugestão de Recomendação' : 'Recomendações' }}</h1>
+<ng-container *ngIf="!exibirSugestao">
+
+    <p>Existem muitos serviços na web que criam texto aleatório - uma coleção sem sentido de palavras aleatórias que
+        parecem
+        texto real. Individualmente, cada palavra significa algo, mas juntas soam como heresia. Para obter um texto
+        normal,
+        as substituições aleatórias por si só não são suficientes - você precisa de redes neurais. Texto aleatório para
+        preencher sites de teste e layouts. Gerador de voz para políticos de sucesso. Visto que o propósito de usar tal
+        texto é puramente demonstrativo, não é necessário carregar a carga semântica. Além disso, a ilegibilidade do
+        texto
+        irá jogar a seu favor ao avaliar a qualidade de percepção do layout.</p>
+    <h3>Essa recomendação foi útil?</h3>
+
+    <button type="button" class="btn btn-success" (click)="marcarEscolha(true)">Sim</button>
+
+    <button type="button" class="btn btn-danger" (click)="marcarEscolha(false)">Não</button>
+</ng-container>
+
+<app-sugestao *ngIf="exibirSugestao"></app-sugestao>
